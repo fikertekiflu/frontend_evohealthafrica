@@ -20,7 +20,7 @@ const AuthPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const endpoint = isSignIn ? `http://localhost:3000/api/auth/login` : `http://localhost:3000/api/auth/register`;
+      const endpoint = isSignIn ? `https://backend-evohealthafrica.onrender.com/api/auth/login` : `https://backend-evohealthafrica.onrender.com/api/auth/register`;
       const { data } = await axios.post(endpoint, formData);
       
       // Check if login or signup is successful and navigate to home page
