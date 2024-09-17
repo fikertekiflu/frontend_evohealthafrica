@@ -25,9 +25,9 @@ const AuthPage = () => {
       
       // Check if login or signup is successful and navigate to home page
       if (isSignIn && data.message === 'Login successful') {
-        navigate('/Home');
+        navigate('/');
       } else if (!isSignIn && data.message === 'User registered successfully') {
-        navigate('/Home');
+        navigate('/');
       }
 
     } catch (error) {
@@ -69,11 +69,11 @@ const AuthPage = () => {
             value={formData.password}
             onChange={handleChange}
             placeholder="Password"
-            className="w-full p-4 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-200"
+            className="w-full p-4 border border-gray-900 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-200"
           />
           <button
             type="submit"
-            className="w-full py-4 bg-gray-600 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-700 transition duration-300 ease-in-out"
+            className="w-full py-4 bg-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-900 transition duration-300 ease-in-out"
           >
             {isSignIn ? 'Sign In' : 'Sign Up'}
           </button>
